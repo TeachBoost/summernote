@@ -47,8 +47,8 @@ if (!hasCodeMirror && isSupportAmd) {
     try {
       // If CodeMirror can't be resolved, `require.resolve` will throw an
       // exception and `hasCodeMirror` won't be set to `true`.
-      require.resolve('codemirror');
-      hasCodeMirror = true;
+      // require.resolve('codemirror');
+      // hasCodeMirror = true;
     } catch (e) {
       // do nothing
     }

@@ -5,7 +5,7 @@
  * Copyright 2013- Alan Hong. and other contributors
  * summernote may be freely distributed under the MIT license.
  *
- * Date: 2017-12-25T06:39Z
+ * Date: 2018-02-15T15:28Z
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery')) :
@@ -978,15 +978,7 @@ var hasCodeMirror = !!window.CodeMirror;
 if (!hasCodeMirror && isSupportAmd) {
     // Webpack
     if (typeof __webpack_require__ === 'function') {
-        try {
-            // If CodeMirror can't be resolved, `require.resolve` will throw an
-            // exception and `hasCodeMirror` won't be set to `true`.
-            require.resolve('codemirror');
-            hasCodeMirror = true;
-        }
-        catch (e) {
-            // do nothing
-        }
+        
     }
     else if (typeof require !== 'undefined') {
         // Browserify
@@ -5108,9 +5100,9 @@ var Dropzone = /** @class */ (function () {
 var CodeMirror;
 if (env.hasCodeMirror) {
     if (env.isSupportAmd) {
-        require(['codemirror'], function (cm) {
-            CodeMirror = cm;
-        });
+        // require(['codemirror'], function(cm) {
+        //   CodeMirror = cm;
+        // });
     }
     else {
         CodeMirror = window.CodeMirror;
